@@ -1,1 +1,121 @@
-hi this is ai
+# 🎓 AI-Based Classroom Monitoring System
+
+## 📌 Project Description
+
+The AI-Based Classroom Monitoring System is a smart application that uses computer vision and artificial intelligence to monitor student behavior in a classroom. The system analyzes live video from a webcam and determines whether students are attentive or not. Based on this, it calculates an engagement score and displays it on a web dashboard.
+
+---
+
+## 🎯 Objectives
+
+* To monitor student attention in real-time
+* To detect faces using computer vision
+* To classify students as attentive or inattentive
+* To calculate engagement score
+* To display results on a web interface
+
+---
+
+## ⚙️ Technologies Used
+
+* Python
+* OpenCV
+* NumPy
+* Flask
+* HTML
+* CSS
+
+---
+
+## 🧠 Working
+
+1. The system captures live video using a webcam.
+2. Each frame is processed using OpenCV.
+3. Faces are detected using Haar Cascade Classifier.
+4. The system checks face position to determine attention.
+5. Engagement score is calculated.
+6. The result is displayed on screen and web dashboard.
+
+---
+
+## 📊 Features
+
+* Real-time face detection
+* Attention tracking
+* Engagement score calculation
+* Web dashboard display
+* Simple and user-friendly interface
+
+---
+
+## 📁 Project Structure
+
+```bash
+AI_Classroom_Monitoring_System/
+│
+├── app.py
+├── ai_model.py
+├── score.txt
+│
+├── templates/
+│   └── index.html
+│
+├── static/
+│   └── style.css
+│
+└── README.md
+```
+
+---
+
+## ▶️ How to Run
+
+1. Install required libraries:
+
+```bash
+pip install flask opencv-python
+```
+
+2. Run the project:
+
+```bash
+python app.py
+```
+
+3. Open browser:
+
+```
+http://127.0.0.1:5000/
+```
+
+---
+
+## 📷 Output
+
+* Face detection on screen
+* Real-time engagement score
+* Web dashboard showing score
+
+---
+
+## 🚀 Future Scope
+
+* Emotion detection
+* Eye tracking
+* Multi-student analysis
+* Attendance system integration
+* Cloud-based monitoring
+
+---
+
+## 👩‍💻 Author
+
+**Vaishnavi Junghare**
+
+---
+
+## 📚 Subject
+
+Artificial Intelligence (TAE-1 Project Based Learning)
+
+---
