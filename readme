@@ -1,12 +1,9 @@
-# 🎓 AI-Based Classroom Monitoring System
+ 🎓 AI-Based Classroom Monitoring System
 
-## 📌 Project Description
+ 📌 Project Description
 
 The AI-Based Classroom Monitoring System is a smart application that uses computer vision and artificial intelligence to monitor student behavior in a classroom. The system analyzes live video from a webcam and determines whether students are attentive or not. Based on this, it calculates an engagement score and displays it on a web dashboard.
-
----
-
-## 🎯 Objectives
+ 🎯 Objectives
 
 * To monitor student attention in real-time
 * To detect faces using computer vision
@@ -14,9 +11,7 @@ The AI-Based Classroom Monitoring System is a smart application that uses comput
 * To calculate engagement score
 * To display results on a web interface
 
----
-
-## ⚙️ Technologies Used
+⚙️ Technologies Used
 
 * Python
 * OpenCV
@@ -24,10 +19,7 @@ The AI-Based Classroom Monitoring System is a smart application that uses comput
 * Flask
 * HTML
 * CSS
-
----
-
-## 🧠 Working
+ 🧠 Working
 
 1. The system captures live video using a webcam.
 2. Each frame is processed using OpenCV.
@@ -36,9 +28,7 @@ The AI-Based Classroom Monitoring System is a smart application that uses comput
 5. Engagement score is calculated.
 6. The result is displayed on screen and web dashboard.
 
----
-
-## 📊 Features
+ 📊 Features
 
 * Real-time face detection
 * Attention tracking
@@ -46,9 +36,7 @@ The AI-Based Classroom Monitoring System is a smart application that uses comput
 * Web dashboard display
 * Simple and user-friendly interface
 
----
-
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```bash
 AI_Classroom_Monitoring_System/
@@ -64,11 +52,8 @@ AI_Classroom_Monitoring_System/
 │   └── style.css
 │
 └── README.md
-```
 
----
-
-## ▶️ How to Run
+▶️ How to Run
 
 1. Install required libraries:
 
@@ -86,19 +71,14 @@ python app.py
 
 ```
 http://127.0.0.1:5000/
-```
-
----
-
-## 📷 Output
+ 📷 Output
 
 * Face detection on screen
 * Real-time engagement score
 * Web dashboard showing score
 
----
 
-## 🚀 Future Scope
+🚀 Future Scope
 
 * Emotion detection
 * Eye tracking
@@ -106,16 +86,11 @@ http://127.0.0.1:5000/
 * Attendance system integration
 * Cloud-based monitoring
 
----
-
-## 👩‍💻 Author
+ 👩‍💻 Author
 
 **Vaishnavi Junghare**
 
----
-
-## 📚 Subject
+ 📚 Subject
 
 Artificial Intelligence (TAE-1 Project Based Learning)
 
----
