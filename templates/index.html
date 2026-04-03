@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Classroom Monitoring System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-section">
+                    <h1 class="sidebar-title">MONITOR</h1>
+                    <p class="sidebar-subtitle">Control Panel</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="nav-list">
+                    <li><a href="#dashboard" class="nav-link active">📊 Dashboard</a></li>
+                    <li><a href="#features" class="nav-link">✨ Features</a></li>
+                    <li><a href="#logs" class="nav-link">📋 Analytics</a></li>
+                </ul>
+            </nav>
+
+            <div class="system-status">
+                <h3 class="status-title">System Status</h3>
+                <div class="status-indicator">
+                    <span class="status-dot">●</span>
+                    <span class="status-text">Active</span>
+                </div>
+                <div class="status-info">
+                    <p><strong>Engagement:</strong> <span id="sidebarScore">0%</span></p>
+                    <p><strong>Faces:</strong> <span id="sidebarFaces">0</span></p>
+                    <p><strong>Status:</strong> <span id="sidebarStatus">Starting...</span></p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="/logout" class="logout-link">🚪 Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <div class="top-header">
+                <div class="header-left">
+                    <h2 class="page-title">AI Classroom Monitoring System</h2>
+                    <p class="page-subtitle">Real-time engagement tracking & analytics</p>
+                </div>
+                <div class="header-right">
+                    <span class="user-badge">👤 Admin</span>
+                </div>
+            </div>
+
+            <!-- System Info Panel -->
+            <section class="info-panel">
+                <div class="info-header">
+                    <h3>System Information</h3>
+                </div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Problem Statement</label>
+                        <span>Student behavior tracking & engagement monitoring</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Feasibility</label>
+                        <span>Vision-based approach</span>
+                    </div>
+                    <div class="info-item">
+                        <label>AI Technique</label>
+                        <span>Pattern recognition & Computer Vision</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Outcome</label>
+                        <span>Real-time engagement scoring</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Hero Action Section -->
+            <section class="action-section">
+                <div class="action-content">
+                    <h3>Initialize Monitoring</h3>
+                    <p>Start real-time classroom monitoring and engagement tracking</p>
+                </div>
+                <button id="startBtn" class="action-btn">▶ Start AI Monitoring</button>
+            </section>
+
+
+            <!-- Live Monitoring Section -->
+            <section class="monitoring-section" id="monitoringSection">
+                <div class="monitoring-grid">
+                    <!-- Camera Feed -->
+                    <div class="video-panel">
+                        <div class="panel-header">
+                            <h3>📹 Live Camera Feed</h3>
+                            <span class="live-indicator">🔴 LIVE</span>
+                        </div>
+                        <img src="{{ url_for('video_feed') }}" alt="Live Feed" class="video-feed">
+                    </div>
+
+                    <!-- Metrics Cards -->
+                    <div class="metrics-section">
+                        <div class="metric-card primary">
+                            <div class="metric-icon">📊</div>
+                            <div class="metric-content">
+                                <span class="metric-label">Engagement Score</span>
+                                <span class="metric-value" id="score">0%</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">👁️</div>
+                            <div class="metric-content">
+                                <span class="metric-label">Faces Detected</span>
+                                <span class="metric-value" id="faces">0</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">✅</div>
+                            <div class="metric-content">
+                                <span class="metric-label">Engaged Faces</span>
+                                <span class="metric-value" id="engaged">0</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-icon">⚙️</div>
+                            <div class="metric-content">
+                                <span class="metric-label">System Status</span>
+                                <span class="metric-value" id="status">Starting...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-panel" id="features">
+                <div class="panel-header">
+                    <h3>✨ Core Features</h3>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon-box">👁️</div>
+                        <h4>Face Detection</h4>
+                        <p>Advanced realtime detection</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">📊</div>
+                        <h4>Engagement Scoring</h4>
+                        <p>Eye tracking algorithms</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">📈</div>
+                        <h4>Analytics</h4>
+                        <p>Historical data tracking</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">👤</div>
+                        <h4>Student Management</h4>
+                        <p>Easy attendance logging</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">📹</div>
+                        <h4>Live Monitoring</h4>
+                        <p>Realtime video stream</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon-box">🔐</div>
+                        <h4>Secure Access</h4>
+                        <p>Admin authentication</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Engagement Chart -->
+            <section class="chart-panel">
+                <div class="panel-header">
+                    <h3>📈 Engagement Trend Analysis</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="engagementChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Student Management Section -->
+            <section class="data-section">
+                <div class="section-row">
+                    <!-- Add Student Form -->
+                    <div class="form-panel">
+                        <div class="panel-header">
+                            <h3>➕ Add New Student</h3>
+                        </div>
+                        <form id="studentForm" class="student-form">
+                            <input type="text" id="name" placeholder="Student Name" required>
+                            <input type="text" id="roll_no" placeholder="Roll Number (Optional)">
+                            <button type="submit" class="btn-submit">Add Student</button>
+                        </form>
+                        <p id="message" class="message"></p>
+                    </div>
+                </div>
+
+                <!-- Student List Table -->
+                <div class="table-panel">
+                    <div class="panel-header">
+                        <h3>👥 Student Registry</h3>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Roll No</th>
+                                    <th>Attendance</th>
+                                </tr>
+                            </thead>
+                            <tbody id="studentsTable">
+                                <tr><td colspan="4">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Engagement Logs Table -->
+                <div class="table-panel" id="logs">
+                    <div class="panel-header">
+                        <h3>📋 Engagement Logs</h3>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Timestamp</th>
+                                    <th>Score</th>
+                                    <th>Faces</th>
+                                    <th>Engaged</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="logsTable">
+                                <tr><td colspan="5">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 AI Classroom Monitoring System</p>
+            <div class="footer-divider"></div>
+            <p class="contact-email">📧 Contact: <a href="mailto:vaishnavijunghare.cse23@sbjit.edu.in">vaishnavijunghare.cse23@sbjit.edu.in</a></p>
+        </div>
+    </footer>
+</body>
+</html>
